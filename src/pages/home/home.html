@@ -1,14 +1,37 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      SEARCH
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color:#f4f4f4">
+  <ion-searchbar></ion-searchbar>
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-row justify-content-between>
+        <ion-col col-auto>
+          <img src="../../assets/imgs/food1.jfif" item-left/>
+        </ion-col>
+        <ion-col>
+          <ion-row text-wrap>
+            <b>{{item.bread}}</b>
+          </ion-row>
+          <ion-row text-wrap>
+              <ion-icon name="pin"></ion-icon>
+            <p>&nbsp;{{item.loc}}</p>
+          </ion-row>
+          <ion-row>
+            <p style="color:#FF6F00"><s>$37.00   </s></p>
+            <p style="font-size:18px" style="color:	#008000">&nbsp;&nbsp;$37.00</p>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab color="foodie" (click)="openModal()"><ion-icon name="add"></ion-icon>
+    </button>
+</ion-fab>
 </ion-content>
