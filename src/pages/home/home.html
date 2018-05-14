@@ -8,19 +8,20 @@
 
 <ion-content padding style="background-color:#f4f4f4">
   <ion-searchbar></ion-searchbar>
-  <ion-card *ngFor="let item of items">
+  <ion-card *ngFor="let item of items" (click)="openProduct()">
     <ion-card-header>
       <ion-row justify-content-between>
         <ion-col col-auto>
-          <img src="assets/imgs/food1.jfif" item-left/>
+          <img src="assets/imgs/food1.jfif"  item-left/>
         </ion-col>
         <ion-col>
+          
           <ion-row text-wrap>
             <b>{{item.bread}}</b>
           </ion-row>
           <ion-row text-wrap>
-              <ion-icon name="pin"></ion-icon>
-            <p>&nbsp;{{item.loc}}</p>
+              <ion-icon  name="ios-pin-outline"></ion-icon>
+            <p style="color:grey">&nbsp;{{item.loc}}</p>
           </ion-row>
           <ion-row>
             <p style="color:#FF6F00"><s>$37.00   </s></p>

@@ -5,14 +5,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
-import { MyApp } from './app.component';
+import { FoodieApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ModalPage } from '../pages/modal/modal';
 import { ModalPageModule } from '../pages/modal/modal.module';
+import { ProductPageModule } from '../pages/product/product.module';
+import { ProductPage } from '../pages/product/product';
 
 @NgModule({
   declarations: [
-    MyApp,
+    FoodieApp,
     HomePage
   ],
   imports: [
@@ -20,13 +22,15 @@ import { ModalPageModule } from '../pages/modal/modal.module';
     HttpClientModule,
     HttpModule,
     ModalPageModule,
-    IonicModule.forRoot(MyApp)
+    ProductPageModule,
+    IonicModule.forRoot(FoodieApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    FoodieApp,
     HomePage,
-    ModalPage
+    ModalPage,
+    ProductPage
   ],
   providers: [
     StatusBar,

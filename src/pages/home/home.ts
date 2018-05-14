@@ -32,6 +32,8 @@ export class HomePage {
       });
       myModal.present();
   }
-  
+  openProduct() {
+    this.navCtrl.push('ProductPage');
+  }
  
 }

@@ -1,0 +1,78 @@
+<!--
+  Generated template for the ProductPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>PRODUCT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="page-product">
+  <div id="wrapper">
+  <ion-slides effect="flip" >
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image"/>
+     
+      <!-- <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p> -->
+    </ion-slide>
+    <ion-fab bottom right>
+      <button ion-fab color="foodie" (click)="callIT('tel:+91 9215151208')"><ion-icon ios="ios-call" md="md-call"></ion-icon>
+      </button>
+  </ion-fab>
+    <!-- <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">Ready to Play?</h2>
+      <button ion-button large clear icon-end color="primary">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide> -->
+  </ion-slides>
+  
+  </div>
+
+    
+    
+    <div>
+        <b>Rib Eye Steak</b>
+        <p>Cut from the rib section, the rib-eye steak is one of the most succulent.</p>
+        <hr>
+              <ion-grid>
+                  <ion-row align-items-start>
+                      <ion-col>
+                        Price<br><br><b>$32</b>
+                      </ion-col>
+                      <ion-col>
+                        Outlet<br><br><b>California</b>
+                      </ion-col>
+                      <ion-col>
+                        Time<br><br><b>20-30 min</b>
+                      </ion-col>
+                      <ion-col>
+                        Rating <br><br>
+                        <ion-icon name="star" style="color:gold"></ion-icon>
+                        <ion-icon name="star" style="color:gold"></ion-icon>
+                        <ion-icon name="star" style="color:gold"></ion-icon>
+                      </ion-col>
+                    </ion-row>
+              </ion-grid>
+              </div>
+              <div style="background:gray">
+                  <ion-fab>
+                    <button color="dark" ion-fab mini ><ion-icon name="ios-more-outline"></ion-icon></button>
+                  </ion-fab>
+                  <span>Our other menus</span>               
+              </div>
+    
+
+    
+</ion-content>
